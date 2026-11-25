@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--white);
+  background: var(--bg);
+
+  --bg: #0c0d14;
+  --panel: #141621;
+  --panel-hover: #1b1d2b;
+  --border: #292a39;
+  --white: #f4f3ff;
+  --muted: #9293a8;
+  --accent: #9b83ff;
+  --accent-hover: #ad9aff;
+  --surface: #171824;
+  --surface-soft: rgba(255, 255, 255, .025);
+  --surface-border: rgba(255, 255, 255, .08);
+  --input-bg: #151621;
+  --contact-bg: #10111a;
+  --shadow: rgba(0, 0, 0, .35);
+  --code-bg: #11131d;
+  --code-text: #e1deee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f5f6fa;
+  --panel: #ffffff;
+  --panel-hover: #f0edff;
+  --border: #e2e3ec;
+  --white: #202033;
+  --muted: #73758a;
+  --accent: #7658dc;
+  --accent-hover: #6546cc;
+  --surface: #ffffff;
+  --surface-soft: rgba(35, 30, 70, .035);
+  --surface-border: rgba(35, 30, 70, .10);
+  --input-bg: #ffffff;
+  --contact-bg: #eeecf8;
+  --shadow: rgba(35, 30, 70, .10);
+  --code-bg: #202033;
+  --code-text: #e1deee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  transition: background-color .3s ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--white);
+  transition:
+    background-color .3s ease,
+    color .3s ease;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+::selection {
+  background: #9b83ff55;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html[dir="rtl"] body,
+html[dir="rtl"] button,
+html[dir="rtl"] a {
+  font-family: 'Vazirmatn', sans-serif;
+}
