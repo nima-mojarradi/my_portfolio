@@ -1665,3 +1665,134 @@ html[dir="rtl"] .contact-method > div {
     min-height: 95px;
   }
 }
+
+
+/* ================================
+   RESUME DOWNLOADS
+================================ */
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.resume-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 25px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+}
+
+.resume-card-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+}
+
+.resume-python-icon {
+  color: #8b79ff;
+  background: rgba(139, 121, 255, .12);
+}
+
+.resume-iot-icon {
+  color: #36b8c8;
+  background: rgba(54, 184, 200, .12);
+}
+
+.resume-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-card-content h3 {
+  margin: 0 0 8px;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.resume-card-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  direction: ltr;
+  text-align: start;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 11px 14px;
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.resume-download:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.resume-download:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+html[dir="rtl"] .resume-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .resume-card-content p {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .resume-card {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .resume-card-content {
+    flex-basis: calc(100% - 70px);
+  }
+
+  .resume-card-content h3 {
+    font-size: 14px;
+  }
+
+  .resume-download {
+    width: 100%;
+  }
+}
