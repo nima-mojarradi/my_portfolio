@@ -14,6 +14,7 @@ import {
   LockKeyhole,
   Monitor,
   Image as ImageIcon,
+  FileDown,
   Sun,
   Moon,
   Network,
@@ -842,6 +843,64 @@ function App() {
                 ))}
               </div>
             </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Resumes */}
+
+      <section id="resumes" className="section container">
+        <p className="eyebrow">
+          {isFa ? "رزومه‌ها" : "MY RESUMES"}
+        </p>
+
+        <div className="section-heading">
+          <h2>
+            {isFa ? "دریافت " : "Download "}
+            <span>{isFa ? "رزومه" : "My Resume"}</span>
+          </h2>
+          <p className="section-intro">
+            {isFa
+              ? "متناسب با موقعیت شغلی موردنظرتان، نسخه مرتبط رزومه‌ام را دریافت کنید."
+              : "Choose the resume that best matches the role you are looking to fill."}
+          </p>
+        </div>
+
+        <div className="resume-grid">
+          <article className="resume-card">
+            <div className="resume-card-icon resume-python-icon">
+              <Code2 size={27} />
+            </div>
+            <div className="resume-card-content">
+              <h3>{isFa ? "توسعه‌دهنده بک‌اند پایتون" : "Python Backend Developer"}</h3>
+              <p>Python · Django · FastAPI · REST APIs</p>
+            </div>
+            <a
+              className="resume-download"
+              href="/resumes/Nima-Mojarradi-Python.pdf"
+              download="Nima-Mojarradi-Python.pdf"
+            >
+              <FileDown size={18} />
+              <span>{isFa ? "دانلود رزومه" : "Download CV"}</span>
+            </a>
+          </article>
+
+          <article className="resume-card">
+            <div className="resume-card-icon resume-iot-icon">
+              <Cpu size={27} />
+            </div>
+            <div className="resume-card-content">
+              <h3>{isFa ? "مهندس اینترنت اشیا و سیستم‌های نهفته" : "IoT & Embedded Systems Engineer"}</h3>
+              <p>ESP32 · C++ · MQTT · Embedded Systems</p>
+            </div>
+            <a
+              className="resume-download"
+              href="/resumes/Nima-Mojarradi-IoT.pdf"
+              download="Nima-Mojarradi-IoT.pdf"
+            >
+              <FileDown size={18} />
+              <span>{isFa ? "دانلود رزومه" : "Download CV"}</span>
+            </a>
           </article>
         </div>
       </section>
